@@ -1,89 +1,209 @@
 /* ------------------------------------------------------------------------------------- */
 /* -------------------------- I. GENERALIDADES DEL CONTENIDO --------------------------- */
 /* ------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------- */
+/* CLASES ESPECIALES ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Selector Universal */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+/* Cuerpo */
+body{
+    background: #ddd;
+}
+/* Borde */
 .borde{
-border: 1px solid gray;
+    border: 1px solid gray;
 }
-.titulo{
-    height: 70px;
-    background: #44595C;
-}
-.color-azul-claro{
-    background: #A0D1D9;
-}
+/* Fondo color Negro */
 .color-negro{
     background: #275359;
 }
-.color-azul-oscuro{
+/* Fondo color gris oscuro */
+.color-gris-oscuro{
     background: #7BA0A6;
 }
+/* Fondo color gris claro */
+.color-gris-claro{
+    background: #A0D1D9;
+}
+/* Fondo color blanco */
 .color-blanco{
-    background: white;
+    background: #FFF;
 }
-.color-azul-brillante{
-    background: #62CEDF;
+/* ------------------------------------------------------------------------------------- */
+/* FUENTES: ROBOTO Y YANONE ------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+/* ------------------------------------------------------------------------------------- */
+/* TEXTO: TÍTULOS, SUBTÍTULOS Y PÁRRAFOS ----------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Títulos */
+.titulo{
+    height: 70px;
+    background: #44595C;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+    clear: both;
 }
+/* Subtítulos */
+.subtitulo{
+    font-family: 'Roboto', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+/* Párrafos */
+.parrafo{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* IMÁGENES ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.imagen{
+	text-align: center;
+    padding: 10px;
+}
+.imagen img{	
+	width: 150px;
+    height: auto;	
+}
+/* ------------------------------------------------------------------------------------- */
+/* BOTONES DE ENLACE ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.ver{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.ver a{
+    display: block;
+    width: 50%;
+    margin: auto;
+	text-decoration: none;
+	color: #EEE;
+	background: #2A5159;
+    padding: 10px;
+	border-radius: 5px;
+}
+.ver a:hover{
+	background: rgba(30, 30, 30, 0.5);
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* UBICACIÓN ESPACIO TEMPORAL ---------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.espacio-temporal{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+}
+/* ------------------------------------------------------------------------------------- */
+/* SOCIAL MEDIA ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------- */
+.social-media{
+    padding: 10px;
+    text-align: center;
+}
+.social-media a{
+    color: #000;
+    font-size: 3em;
+    padding: 0 5px 0 5px;
+}
+.social-media a:hover{
+    color: #FFF;
+}
+
 /* ------------------------------------------------------------------------------------- */
 /* ---------------------------- II. LAYOUT: MAQUETACIÓN WEB ---------------------------- */
 /* ------------------------------- ESCRITORIO Y PORTATIL ------------------------------- */
 /* ------------------------------------------------------------------------------------- */
-/* contenedor */
-.cotenedor{
-    width: 90%;
-    max-width: 1200px;
+/* Contenedor */
+.contenedor{
+    width: 95%;
+    max-width: 1280px;
     margin: auto;
+    border-top: 0;
 }
-/* navegador */
+/* Navegador */
 nav{
     width: 100%;
-    height: 70px;
+    height: 50px;
+    border-bottom: 1px solid gray;
 }
-/* logo */
-.logo {
+/* Logo */
+.logo{
     width: 20%;
-    height: 100%;
+    height: 100%;        
     float: left;
 }
 .logo img{
     width: 100%;
     height: 100%;
 }
-/* menu */
-.menu {
+/* Menú */
+.menu{
     width: 65%;
     height: 100%;
-    
+    background: #62CEDF;
     float: left;
-    
 }
-/* ingreso */
-.ingreso {
+/* Ingreso */
+.ingreso{
     width: 15%;
-    height: 100%;
+    height: 100%;    
     float: left;
 }
-/* encabezado y secciones */
-header, section{
-    height: 700px;
+/* Encabezado */
+header{
+    height: 80vh;
+    background-image: url(../img/header.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
-/* portafolio */
-.port-col{
+/* Portafolio */
+.portafolio{
+    height: auto;
+}
+.port-col-izq,
+.port-col-cnt,
+.port-col-der{
     width: 33.33%;
     height: 100%;
+    padding: 20px;
     float: left;
 }
-/* nosotros */
-.nos-fila{
+.portafolio img{
+    width: 200px;
+}
+/* Nosotros */
+.nosotros{
+    width: 100%;
+    height: 90vh;
+}
+.nos-fila-arr,
+.nos-fila-cnt,
+.nos-fila-abj{
     width: 100%;
     height: 33.33%;
 }
-.nos-col-ext{
+.nos-col-izq,
+.nos-col-der{
     width: 40%;
     height: 100%;
     float: left;
@@ -91,28 +211,266 @@ header, section{
 .nos-col-cnt{
     width: 20%;
     height: 100%;
+    padding: 20px;
+    text-align: center;
     float: left;
 }
-/* contactenos */
-.cont-col{
+.nosotros img{
+    border-radius: 50%;
+}
+.nosotros .nos-col-izq .subtitulo,
+.nosotros .nos-col-izq .parrafo{
+    text-align: right;
+}
+.nosotros .nos-col-izq a{
+    margin-right: 0;
+}
+.nosotros .nos-col-der .subtitulo,
+.nosotros .nos-col-der .parrafo{
+    text-align: left;
+}
+.nosotros .nos-col-der a{
+    margin-left: 0;
+}
+/* Contáctenos */
+.contactenos{
+    height: 90vh;
+}
+.cont-col-izq,
+.cont-col-der{
     width: 50%;
     height: 100%;
     float: left;
 }
-.cont-fila-arr{
+.cont-col-der .cont-fila-arr{
     width: 100%;
     height: 70%;
+}
+.cont-fila-arr iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 .cont-fila-abj{
     width: 100%;
     height: 30%;
+    padding: 10px;
 }
-/* pie de pagina */
+/* Pie de Página */
 footer{
     width: 100%;
     height: 70px;
+    padding: 10px; 
 }
+footer .parrafo{       
+    text-align: center;
+    color:#FFF;
+    font-size: 0.7em;    
+}
+
 /* ------------------------------------------------------------------------------------- */
 /* ------------------------------ III. RESPONSIVE DESIGN ------------------------------- */
 /* -------------------------------------- TABLETS -------------------------------------- */
 /* ------------------------------------------------------------------------------------- */
+/* Tablet: Media Queries */
+@media (max-width: 992px) {
+    /* Contenedor */
+    .contenedor{
+        width: 100%;        
+    }
+    /* Navegador */
+    nav{        
+        height: 150px;        
+    }
+    /* Logo */
+    .logo{
+        width: 100%;
+        height: 100px;
+    }    
+    /* Menú */
+    .menu{        
+        width: 80%;
+        height: 50px;
+    }
+    /* Ingreso */
+    .ingreso{
+        width: 20%;
+        height: 50px;        
+    }
+    /* Portafolio */    
+    .port-col-izq{
+        width: 100%;
+        height: 50%;        
+    }
+    .port-col-cnt,
+    .port-col-der{
+        width: 50%;
+        height: 50%;
+    }    
+    .portafolio img{
+        width: 100px;
+    }    
+    /* Nosotros */    
+    .nos-fila-arr,
+    .nos-fila-cnt,
+    .nos-fila-abj{
+        width: 100%;
+        height: 33.33%;
+    }
+    .nos-fila-arr .nos-col-der,
+    .nos-fila-abj .nos-col-der{
+        display: none;
+    }
+    .nos-fila-arr .nos-col-izq,
+    .nos-fila-abj .nos-col-izq{
+        width: 70%;
+    }
+    .nos-fila-arr .nos-col-cnt,
+    .nos-fila-abj .nos-col-cnt{
+        width: 30%;
+        background: #FFF;
+    }
+    .nos-fila-cnt .nos-col-izq{
+        display: none;
+    }
+    .nos-fila-cnt .nos-col-cnt{
+        width: 30%;
+    }
+    .nos-fila-cnt .nos-col-der{
+        width: 70%;
+    }    
+    /* Contáctenos */    
+    .cont-col-izq{
+        width: 100%;
+        height: 50%;
+    }
+    .cont-col-der{
+        width: 100%;
+        height: 50%;        
+    }
+    .cont-col-der .cont-fila-arr,
+    .cont-col-der .cont-fila-abj{
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    .cont-fila-arr iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .cont-fila-abj .espacio-temporal{
+        height: 70%;
+        padding-top: 60px;
+    }
+    .cont-fila-abj .social-media{
+        height: 30%;
+        padding-top: 25px;
+    }        
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------- IV. RESPONSIVE DESIGN ------------------------------- */
+/* ------------------------------------- CELULARES ------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+@media (max-width: 768px) {        
+    /* Contenedor */
+    .contenedor{
+        width: 100%;
+        max-width: 100%!important;        
+    }
+    /* Navegador */
+    nav{        
+        height: 150px;        
+    }
+    /* Logo */
+    .logo{
+        width: 100%;
+        height: 50px;        
+    }    
+    /* Menú */
+    .menu{        
+        width: 100%;
+        height: 50px;
+    }
+    /* Ingreso */
+    .ingreso{
+        width: 100%;
+        height: 50px;        
+    }
+    /* Encabezado */
+    header{
+        height: 300px;
+        background-attachment: initial;        
+    }
+    /* Portafolio */    
+    .port-col-izq{
+        width: 100%;
+        height: 50%;        
+    }
+    .port-col-cnt,
+    .port-col-der{
+        width: 100%;
+        height: 50%;
+    }    
+    .portafolio img{
+        width: 100px;
+    }    
+    /* Nosotros */    
+    .nos-fila-arr,
+    .nos-fila-cnt,
+    .nos-fila-abj{
+        width: 100%;
+        height: 33.33%;
+    }
+    .nos-fila-arr .nos-col-der,
+    .nos-fila-abj .nos-col-der{
+        display: none;
+    }
+    .nos-fila-arr .nos-col-izq,
+    .nos-fila-abj .nos-col-izq{
+        width: 70%;
+    }
+    .nos-fila-arr .nos-col-cnt,
+    .nos-fila-abj .nos-col-cnt{
+        width: 30%;
+        background: #FFF;
+    }
+    .nos-fila-cnt .nos-col-izq{
+        display: none;
+    }
+    .nos-fila-cnt .nos-col-cnt{
+        width: 30%;
+    }
+    .nos-fila-cnt .nos-col-der{
+        width: 70%;
+    }    
+    /* Contáctenos */
+    .cont-col-izq{
+        width: 100%;
+        height: 50%;
+    }
+    .cont-col-der{
+        width: 100%;
+        height: 50%;        
+    }
+    .cont-col-der .cont-fila-arr,
+    .cont-col-der .cont-fila-abj{
+        width: 100%;
+        height: 50%;
+        float: left;
+    }
+    .cont-fila-arr iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    .cont-fila-abj .espacio-temporal{
+        height: 70%;
+        padding-top: 7px;
+    }
+    .cont-fila-abj .social-media{
+        height: 30%;
+        padding-top: 2px;        
+    }    
+}
