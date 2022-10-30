@@ -1,0 +1,271 @@
+/* ------------------------------------------------------------------------------------- */
+/* -------------------------- I. GENERALIDADES DEL CONTENIDO --------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------- */
+/* CLASES ESPECIALES ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Selector Universal */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Cuerpo */
+body{
+    background: #ddd;
+}
+/* Borde */
+.borde{
+    border: 1px solid gray;
+}
+/* Fondo color Negro */
+.color-negro{
+    background: #275359;
+}
+/* Fondo color gris oscuro */
+.color-gris-oscuro{
+    background: #7BA0A6;
+}
+/* Fondo color gris claro */
+.color-gris-claro{
+    background: #A0D1D9;
+}
+/* Fondo color blanco */
+.color-blanco{
+    background: #FFF;
+} 
+
+/* ------------------------------------------------------------------------------------- */
+/* FUENTES: ROBOTO Y YANONE ------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+/* ------------------------------------------------------------------------------------- */
+/* TEXTO: TÍTULOS, SUBTÍTULOS Y PÁRRAFOS ----------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Títulos */
+.titulo{
+    height: 70px;
+    background: #44595C;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #FFF;
+    text-align: center;
+    align-items: center;    
+    clear: both;
+}
+/* Subtítulos */
+.subtitulo{
+    font-family: 'Roboto', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+/* Párrafos */
+.parrafo{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    padding: 10px;
+}
+/* ------------------------------------------------------------------------------------- */
+/* IMÁGENES ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.imagen{
+	text-align: center;
+    padding: 10px;
+}
+.imagen img{	
+	width: 150px;
+    height: auto;	
+}
+/* ------------------------------------------------------------------------------------- */
+/* BOTONES DE ENLACE ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.ver{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: #CCC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.ver a{
+    display: block;
+    width: 50%;
+    margin: auto;
+	text-decoration: none;
+	color: #EEE;
+	background: #2A5159;
+    padding: 10px;
+	border-radius: 5px;
+}
+.ver a:hover{
+	background: rgba(30, 30, 30, 0.5);
+}
+/* ------------------------------------------------------------------------------------- */
+/* UBICACIÓN ESPACIO TEMPORAL ---------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.espacio-temporal{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+}
+/* ------------------------------------------------------------------------------------- */
+/* SOCIAL MEDIA ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------- */
+.social-media{
+    padding: 10px;
+    text-align: center;
+}
+.social-media a{
+    color: #000;
+    font-size: 3em;
+    padding: 0 5px 0 5px;
+}
+.social-media a:hover{
+    color: #FFF;
+}
+/* ------------------------------------------------------------------------------------- */
+/* ---------------------------- II. LAYOUT: MAQUETACIÓN WEB ---------------------------- */
+/* ------------------------------- ESCRITORIO Y PORTATIL ------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Contenedor */
+.contenedor{    
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* Navegador, Encabezado, Secciones, footer */
+nav,
+.titulo,
+section,
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;    
+}
+/* Navegador */
+nav{
+    height: 50px;
+}
+/* Logo */
+.logo{
+    flex: 20%;    
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+/* Menú */
+.menu{
+    flex: 65%;
+    background:#62CEDF;    
+}
+/* Ingreso */
+.ingreso{
+    flex: 15%;
+}
+/* Encabezado */
+header{
+    height: 80vh;
+    background-image: url(../img/header.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+/* Portafolio */
+section.portafolio{    
+    height: auto;
+}
+.port-col-izq,
+.port-col-cnt,
+.port-col-der{
+    padding: 10px;
+}
+
+/* Nosotros */
+.nosotros{
+    height: auto;
+    min-height: 82.5vh;
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+.nos-fila-arr,
+.nos-fila-cnt,
+.nos-fila-abj{
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.nos-col-izq,
+.nos-col-der{
+    flex: 40%;
+}
+.nos-col-cnt{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nosotros img{
+    
+}
+.nosotros .nos-col-izq .subtitulo,
+.nosotros .nos-col-izq .parrafo{
+    
+}
+.nosotros .nos-col-izq a{
+    
+}
+.nosotros .nos-col-der .subtitulo,
+.nosotros .nos-col-der .parrafo{
+    
+}
+.nosotros .nos-col-der a{
+    
+}
+/* Contáctenos */
+.contactenos{
+    
+}
+.cont-col-izq,
+.cont-col-der{
+    
+}
+.cont-col-der .cont-fila-arr{
+    
+}
+.cont-fila-arr iframe{
+    
+}
+.cont-fila-abj{
+    
+}
+/* Pie de Página */
+footer{
+    
+}
+footer .parrafo{       
+    
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------ III. RESPONSIVE DESIGN ------------------------------- */
+/* -------------------------------------- TABLETS -------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+/* Tablet: Media Queries */
+@media (max-width: 992px) {
+        
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------- IV. RESPONSIVE DESIGN ------------------------------- */
+/* ------------------------------------- CELULARES ------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+@media (max-width: 768px) {        
+    
+}
